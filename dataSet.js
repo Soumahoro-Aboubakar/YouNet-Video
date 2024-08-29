@@ -1004,8 +1004,7 @@ export const dataVideoSet = [
           {
             videoId: 'MALDnmwEfrs',
             videoTitle: 'Saiyuki Part 1',
-            videoImageUrl:
-              'https://i.ytimg.com/an_webp/MALDnmwEfrs/mqdefault_6s.webp?du=3000&sqp=CNSa8rUG&rs=AOn4CLDXbw2oTdmW_YFipYpzvPCu40oPeA'
+            videoImageUrl: imageUrl8
           }
         ]
       },

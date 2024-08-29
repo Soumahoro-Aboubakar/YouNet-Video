@@ -13,7 +13,7 @@ import { colors, device, fonts, gStyle, images } from '../constants';
 // components
 import TouchText from './TouchText';
 
-function HeaderHome({ all, show }) {
+function HeaderHome({ all = true, show =true }) {
   const navigation = useNavigation();
 
   // local state
@@ -59,9 +59,7 @@ function HeaderHome({ all, show }) {
   );
 }
 
-HeaderHome.defaultProps = {
-  all: true
-};
+
 
 HeaderHome.propTypes = {
   // required

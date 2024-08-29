@@ -11,7 +11,7 @@
       "ios",
       "web"
     ],
-    "githubUrl": "https://github.com/calebnance/expo-netflix",
+    "githubUrl": "https://github.com/calebnance/YouNet",
     "orientation": "portrait",
     "primaryColor": "#000000",
     "icon": "src/assets/icon.png",
@@ -27,7 +27,8 @@
       "**/*"
     ],
     "android": {
-      "versionCode": 2
+      "versionCode": 2,
+      "package": "com.aboubakarkone.netflixclone"
     },
     "ios": {
       "buildNumber": "0.0.2",
@@ -37,6 +38,10 @@
       "eas": {
         "projectId": "54a8c010-d3bf-4cb2-953e-6ebb3fe91a21"
       }
-    }
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font"
+    ]
   }
 }

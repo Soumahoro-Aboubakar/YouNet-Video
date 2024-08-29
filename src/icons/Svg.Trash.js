@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-function SvgTrash({ active, size }) {
+function SvgTrash({ active = false, size = 24 }) {
   return (
     <Svg height={size} width={size} viewBox="0 0 24 24">
       <Path
@@ -18,13 +18,7 @@ function SvgTrash({ active, size }) {
   );
 }
 
-SvgTrash.defaultProps = {
-  active: false,
-  size: 24
-};
-
 SvgTrash.propTypes = {
-  // optional
   active: PropTypes.bool,
   size: PropTypes.number
 };

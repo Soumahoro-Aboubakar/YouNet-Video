@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-function SvgDownloads({ fill, size }) {
+function SvgDownloads({ fill = colors.black, size = 24 }) {
   return (
     <Svg height={size} width={size} viewBox="0 0 24 24">
       <Path
@@ -18,15 +18,4 @@ function SvgDownloads({ fill, size }) {
   );
 }
 
-SvgDownloads.defaultProps = {
-  fill: colors.black,
-  size: 24
-};
-
-SvgDownloads.propTypes = {
-  // optional
-  fill: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  size: PropTypes.number
-};
-
-export default React.memo(SvgDownloads);
+SvgDownloads

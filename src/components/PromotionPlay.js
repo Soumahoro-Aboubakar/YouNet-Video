@@ -6,7 +6,7 @@ import { colors, fonts, gStyle } from '../constants';
 // icons
 import SvgPlay from '../icons/Svg.Play';
 
-function PromotionPlay({ icon, onPress, text }) {
+function PromotionPlay({ icon = <SvgPlay />, onPress, text = "rectangle" }) {
   return (
     <TouchableOpacity
       activeOpacity={gStyle.activeOpacity}
@@ -21,10 +21,7 @@ function PromotionPlay({ icon, onPress, text }) {
   );
 }
 
-PromotionPlay.defaultProps = {
-  icon: <SvgPlay />,
-  text: 'Play'
-};
+
 
 PromotionPlay.propTypes = {
   // required

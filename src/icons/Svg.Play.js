@@ -4,12 +4,8 @@ import { StyleSheet, View } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-function SvgPlay({ active, fill, size }) {
-  let fillColor = fill;
-
-  if (fillColor === null) {
-    fillColor = active ? colors.white : colors.inactiveGrey;
-  }
+function SvgPlay({ active = true, fill = null, size = 20 }) {
+  const fillColor = fill === null ? (active ? colors.white : colors.inactiveGrey) : fill;
 
   return (
     <View style={styles.container}>
@@ -25,14 +21,7 @@ function SvgPlay({ active, fill, size }) {
   );
 }
 
-SvgPlay.defaultProps = {
-  active: true,
-  fill: null,
-  size: 20
-};
-
 SvgPlay.propTypes = {
-  // optional
   active: PropTypes.bool,
   fill: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   size: PropTypes.number

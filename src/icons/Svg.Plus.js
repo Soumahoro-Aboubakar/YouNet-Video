@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-function SvgPlus({ active, size }) {
+function SvgPlus({ active = true, size = 24 }) {
   return (
     <Svg height={size} width={size} viewBox="0 0 24 24">
       <Path
@@ -14,13 +14,7 @@ function SvgPlus({ active, size }) {
   );
 }
 
-SvgPlus.defaultProps = {
-  active: true,
-  size: 24
-};
-
 SvgPlus.propTypes = {
-  // optional
   active: PropTypes.bool,
   size: PropTypes.number
 };

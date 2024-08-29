@@ -13,7 +13,7 @@ import mockData from '../mockdata/data';
 import { useNavigation } from '@react-navigation/native';
 import VideoPlayerModal from './VideoPlayerModal';
 
-function ShowScroller({ dataset = [], type, videoType = '' }) {
+function ShowScroller({ dataset = [], type = "rectangle", videoType = '' }) {
   const [videoInfos, setVideoInfos] = React.useState({
     id: '',
     videoTitle: '',
@@ -106,10 +106,7 @@ ShowScroller.propTypes = {
   type: PropTypes.string
 };
 
-ShowScroller.defaultProps = {
-  dataset: [], // Valeur par défaut correcte pour dataset
-  type: 'rectangle'
-};
+
 
 const styles = StyleSheet.create({
   rectangle: {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-function SvgCast({ active, size }) {
+function SvgCast({ active = true, size = 24 }) {
   return (
     <Svg height={size} width={size} viewBox="0 0 24 24">
       <Path
@@ -18,13 +18,7 @@ function SvgCast({ active, size }) {
   );
 }
 
-SvgCast.defaultProps = {
-  active: true,
-  size: 24
-};
-
 SvgCast.propTypes = {
-  // optional
   active: PropTypes.bool,
   size: PropTypes.number
 };

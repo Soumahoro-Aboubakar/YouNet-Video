@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
-function TouchText({ onPress = ()=> console.log(""), text, textStyle }) {
+function TouchText({ onPress = ()=> console.log(""), text, textStyle = {} }) {
   return (
     <TouchableOpacity activeOpacity={gStyle.activeOpacity} onPress={onPress}>
       <Text style={[styles.text, textStyle]}>{text}</Text>
@@ -11,9 +11,7 @@ function TouchText({ onPress = ()=> console.log(""), text, textStyle }) {
   );
 }
 
-TouchText.defaultProps = {
-  textStyle: {}
-};
+
 
 TouchText.propTypes = {
   // optionnel

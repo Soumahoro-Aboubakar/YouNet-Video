@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-function SvgInfo({ active, fill, size }) {
-  let fillColor = fill;
-
-  if (fillColor === null) {
-    fillColor = active ? colors.white : colors.inactiveGrey;
-  }
+function SvgInfo({ active = true, fill = null, size = 24 }) {
+  const fillColor = fill === null ? (active ? colors.white : colors.inactiveGrey) : fill;
 
   return (
     <Svg height={size} width={size} viewBox="0 0 24 24">
@@ -24,14 +20,7 @@ function SvgInfo({ active, fill, size }) {
   );
 }
 
-SvgInfo.defaultProps = {
-  active: true,
-  fill: null,
-  size: 24
-};
-
 SvgInfo.propTypes = {
-  // optional
   active: PropTypes.bool,
   fill: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   size: PropTypes.number

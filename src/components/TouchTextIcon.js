@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { colors, fonts, gStyle } from '../constants';
 
-function TouchTextIcon({ icon, iconSize, onPress, text, width }) {
+function TouchTextIcon({ icon, iconSize = 20 , onPress, text, width = 280 }) {
   return (
     <TouchableOpacity
       activeOpacity={gStyle.activeOpacity}
@@ -18,10 +18,7 @@ function TouchTextIcon({ icon, iconSize, onPress, text, width }) {
   );
 }
 
-TouchTextIcon.defaultProps = {
-  iconSize: 20,
-  width: 280
-};
+
 
 TouchTextIcon.propTypes = {
   // required

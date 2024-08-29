@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Svg, { Path } from 'react-native-svg';
 import { colors } from '../constants';
 
-function SvgHome({ fill, size }) {
+function SvgHome({ fill = colors.black, size = 24 }) {
   return (
     <Svg height={size} width={size} viewBox="0 0 24 24">
       <Path
@@ -14,13 +14,7 @@ function SvgHome({ fill, size }) {
   );
 }
 
-SvgHome.defaultProps = {
-  fill: colors.black,
-  size: 24
-};
-
 SvgHome.propTypes = {
-  // optional
   fill: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   size: PropTypes.number
 };
